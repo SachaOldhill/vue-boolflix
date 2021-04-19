@@ -3,9 +3,20 @@
   padding: 0;
   box-sizing: border-box;
 }
-.my_container{
-  height: 100vh;
+body{
   background-color: rgb(108, 80, 184);
   color: black;
+}
+.my_container{
+  height: 100vh;
   width: 100%;
+}
+.my_container img {
+  font-size: 150px;
+  border-radius: 5px;
+}
+.films{
+  display: inline-block;
+  width: calc(100% / 2 - 15px);
+  padding: 15px;
 }

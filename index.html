@@ -23,14 +23,17 @@
   <body>
    <div id="app" class="">
      <div class="my_container">
-       <div v-for="" class="">
-         <input v-model="search"type="text" name="" value="" placeholder="Scrivi il nome del film">
-         <button type="button" name="button">Cerca</button>
-         <div v-for=""class="films">
-           <h2>titolo</h2>
-           <img :src="" alt="">
-           <h2>voto</h2>
-           <h2>lingua</h2>
+       <div class="">
+         <div class="search_bar">
+           <input v-model="search"type="text" name="" value="" placeholder="Scrivi il nome del film">
+           <button type="button" name="button">Cerca</button>
+         </div>
+
+         <div v-for="film in arrFilms"class="films">
+           <h2> {{ film.title }} </h2>
+           <img src="" alt="">
+           <h2>{{film.vote_average}}</h2>
+           <h2>{{film.original_language}}</h2>
          </div>
        </div>
      </div>
