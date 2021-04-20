@@ -22,21 +22,23 @@
   </head>
   <body>
    <div id="app" class="">
+     <div class="search_bar">
+       <input v-model="search"type="text" @keyup.enter='clickSearch' name="" value="" placeholder="Scrivi il nome del film">
+       <button @click='clickSearch'type="button" name="button">Cerca</button>
+     </div>
      <div class="my_container">
-       <div class="">
-         <div class="search_bar">
-           <input v-model="search"type="text" @keyup.enter='clickSearch' name="" value="" placeholder="Scrivi il nome del film">
-           <button @click='clickSearch'type="button" name="button">Cerca</button>
-         </div>
-
+       <div class="container_film">
          <div v-for="film in arrFilms"class="films">
            <h2> {{ film.title }} </h2>
            <div class="my_poster">
              <img :src="'https://image.tmdb.org/t/p/w185' + film.poster_path" alt="">
            </div>
            <h2>{{ film.vote_average }}</h2>
-           <h3>{{ film.original_language }}</h3>
-           <img class="flag":src="getFlag(film.original_language)" alt="">
+           <div class="">
+             <h3>{{ film.original_language }}</h3>
+             <img class="flag":src="getFlag(film.original_language)" alt="">
+           </div>
+
          </div>
 
          <div v-for="serie in arrSeries"class="series">

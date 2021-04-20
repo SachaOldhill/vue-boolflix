@@ -11,20 +11,29 @@ body{
   height: 100vh;
   width: 100%;
 }
+.container_film{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+}
 .films{
   margin: 10px;
   background-color: rgb(25, 148, 173);
   border-radius: 4px;
   display: inline-block;
-  width: calc(100% / 2 - 25px);
+  width: calc(100% / 4 - 25px);
   padding: 15px;
 }
-.series{
+.series {
   margin: 10px;
-  background-color: purple;
+  background-color: rgb(25, 148, 173);
   border-radius: 4px;
-  display: inline-block;
-  width: calc(100% / 2 - 25px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% / 4 - 25px);
   padding: 15px;
 }
 .flag {
@@ -36,4 +45,11 @@ body{
   display: inline-block;
   padding-right: 20px;
   vertical-align: middle;
+}
+.my_poster img{
+  height: 200px;
+  border-radius: 4px;
+}
+.films h2, .series h2{
+  flex-grow: 1;
 }
