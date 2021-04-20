@@ -26,14 +26,27 @@
        <div class="">
          <div class="search_bar">
            <input v-model="search"type="text" name="" value="" placeholder="Scrivi il nome del film">
-           <button type="button" name="button">Cerca</button>
+           <button @click='clickSearch'type="button" name="button">Cerca</button>
          </div>
 
          <div v-for="film in arrFilms"class="films">
            <h2> {{ film.title }} </h2>
-           <img src="" alt="">
-           <h2>{{film.vote_average}}</h2>
-           <h2>{{film.original_language}}</h2>
+           <div class="poster">
+             <img src="" alt="">
+           </div>
+           <h2>{{ film.vote_average }}</h2>
+           <h3>{{ film.original_language }}</h3>
+           <img :src="getFlag(film.original_language)" alt="">
+         </div>
+
+         <div v-for="serie in arrSeries"class="series">
+           <h2> {{ serie.name }} </h2>
+           <div class="my_poster">
+            <img src="" alt="">
+           </div>
+           <h2>{{ serie.vote_average }}</h2>
+           <h3>{{ serie.original_language }}</h3>
+           <img :src="getFlag(serie.original_language)" alt="">
          </div>
        </div>
      </div>
