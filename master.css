@@ -13,7 +13,7 @@ body{
 }
 .films{
   margin: 10px;
-  background-color: grey;
+  background-color: rgb(25, 148, 173);
   border-radius: 4px;
   display: inline-block;
   width: calc(100% / 2 - 25px);
@@ -27,12 +27,12 @@ body{
   width: calc(100% / 2 - 25px);
   padding: 15px;
 }
-.films .series img {
-  height: 25px;
+.flag {
+  height: 17px;
   border-radius: 5px;
   display: inline-block;
 }
-.films .series h3 {
+.films h3, .series h3 {
   display: inline-block;
   padding-right: 20px;
   vertical-align: middle;
