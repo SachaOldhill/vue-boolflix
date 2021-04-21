@@ -46,10 +46,35 @@ body{
   padding-right: 20px;
   vertical-align: middle;
 }
-.my_poster img{
-  height: 200px;
+.my_poster{
+  position: relative;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
   border-radius: 4px;
+  z-index: 2;
 }
 .films h2, .series h2{
   flex-grow: 1;
+}
+.fa-star {
+  color: yellow;
+}
+.my_poster:hover{
+  opacity: 0;
+}
+.my_info{
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: relative;
+}
+.my_info:hover{
+  opacity: 1;
+}
+img{
+  width: 100%;
+  height: 100%;
 }

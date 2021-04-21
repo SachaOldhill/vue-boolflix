@@ -37,7 +37,6 @@ function initVue(){
           const serieTv = data.data.results;
           this.arrSeries = serieTv;
           console.log(this.arrSeries);
-
         })
         .catch(() => console.log('error'));
       },
@@ -48,6 +47,11 @@ function initVue(){
           return "img/en.png"
         }
       },
+      getStar: function(vote){
+        averageVote = Math.floor(vote/2);
+        console.log(averageVote);
+        return averageVote;
+      }
       // filteredFilm: function() {
       //     if (this.search == '') {
       //         return this.film;

@@ -29,26 +29,38 @@
      <div class="my_container">
        <div class="container_film">
          <div v-for="film in arrFilms"class="films">
-           <h2> {{ film.title }} </h2>
            <div class="my_poster">
              <img :src="'https://image.tmdb.org/t/p/w185' + film.poster_path" alt="">
            </div>
-           <h2>{{ film.vote_average }}</h2>
-           <div class="">
-             <h3>{{ film.original_language }}</h3>
-             <img class="flag":src="getFlag(film.original_language)" alt="">
-           </div>
+           <div class="my_info">
 
+             <h2> {{ film.title }} </h2>
+             <h2>{{ getStar(film.vote_average) }}</h2>
+             <i v-for='i in getStar(film.vote_average)' class="fas fa-star"></i>
+             <i v-for='i in 5 - getStar(film.vote_average)' class="far fa-star"></i>
+
+             <div class="">
+               <h3>{{ film.original_language }}</h3>
+               <img class="flag":src="getFlag(film.original_language)" alt="">
+             </div>
+
+           </div>
          </div>
 
          <div v-for="serie in arrSeries"class="series">
-           <h2> {{ serie.name }} </h2>
            <div class="my_poster">
-            <img src="" alt="">
+             <img :src="'https://image.tmdb.org/t/p/w185' + serie.poster_path" alt="">
            </div>
-           <h2>{{ serie.vote_average }}</h2>
-           <h3>{{ serie.original_language }}</h3>
-           <img class="flag":src="getFlag(serie.original_language)" alt="">
+           <div class="my_info">
+             <h2> {{ serie.name }} </h2>
+             <h2>{{ getStar(serie.vote_average) }}</h2>
+             <i v-for='i in getStar(serie.vote_average)' class="fas fa-star"></i>
+             <i v-for='i in 5 - getStar(serie.vote_average)' class="far fa-star"></i>
+             <div class="">
+               <h3>{{ serie.original_language }}</h3>
+               <img class="flag":src="getFlag(serie.original_language)" alt="">
+             </div>
+           </div>
          </div>
        </div>
      </div>
