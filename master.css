@@ -17,7 +17,8 @@ body{
   justify-content: center;
   align-items: stretch;
 }
-.films{
+.cards{
+  position: relative;
   margin: 10px;
   background-color: rgb(25, 148, 173);
   border-radius: 4px;
@@ -25,29 +26,21 @@ body{
   width: calc(100% / 4 - 25px);
   padding: 15px;
 }
-.series {
-  margin: 10px;
-  background-color: rgb(25, 148, 173);
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: calc(100% / 4 - 25px);
-  padding: 15px;
+.bg-purple {
+  background-color: rgb(130, 9, 161);
 }
 .flag {
   height: 17px;
   border-radius: 5px;
   display: inline-block;
 }
-.films h3, .series h3 {
+.cards h3 {
   display: inline-block;
   padding-right: 20px;
   vertical-align: middle;
 }
 .my_poster{
-  position: relative;
+  position: absolute;
   top: 0;
   right: 0;
   height: 100%;
@@ -55,26 +48,29 @@ body{
   border-radius: 4px;
   z-index: 2;
 }
-.films h2, .series h2{
+.cards h2{
   flex-grow: 1;
 }
 .fa-star {
   color: yellow;
 }
-.my_poster:hover{
-  opacity: 0;
-}
 .my_info{
   background-color: black;
+  color: white;
   width: 100%;
   height: 100%;
   opacity: 0;
-  position: relative;
+  padding: 10px;
+  border-radius: 4px;
 }
-.my_info:hover{
+.cards:hover .my_poster{
+  opacity: 0;
+}
+.cards:hover .my_info{
   opacity: 1;
 }
-img{
-  width: 100%;
+.my_poster img{
   height: 100%;
+  width: 100%;
+  border-radius: 4px;
 }

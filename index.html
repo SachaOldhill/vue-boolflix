@@ -28,7 +28,7 @@
      </div>
      <div class="my_container">
        <div class="container_film">
-         <div v-for="film in arrFilms"class="films">
+         <div v-for="film in arrFilms"class="cards">
            <div class="my_poster">
              <img :src="'https://image.tmdb.org/t/p/w185' + film.poster_path" alt="">
            </div>
@@ -47,7 +47,7 @@
            </div>
          </div>
 
-         <div v-for="serie in arrSeries"class="series">
+         <div v-for="serie in arrSeries"class="cards bg-purple">
            <div class="my_poster">
              <img :src="'https://image.tmdb.org/t/p/w185' + serie.poster_path" alt="">
            </div>
