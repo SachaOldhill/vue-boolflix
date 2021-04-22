@@ -40,6 +40,20 @@ function initVue(){
         })
         .catch(() => console.log('error'));
       },
+      getActors: function(movieId){
+        console.log("ciao");
+        axios.get(`https://api.themoviedb.org/3/movie/${movieId}/credits` , {
+          params:{
+           "api_key":"ddde7396f3d042a400eadf2474278e89",
+          }
+        })
+        .then(data => {
+        })
+        .catch(() => console.log('error'));
+      },
+      prova: function(){
+        console.log("prova");
+      },
       getFlag: function(language){
         if (language == "it"){
           return "img/it.png"

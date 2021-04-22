@@ -30,7 +30,7 @@
        <div class="container_film">
          <div v-for="film in arrFilms"class="cards">
            <div class="my_poster">
-             <img :src="'https://image.tmdb.org/t/p/w185' + film.poster_path" alt="">
+             <img v-if='film.poster_path!=null' :src="'https://image.tmdb.org/t/p/w185' + film.poster_path" alt="">
            </div>
            <div class="my_info">
 
@@ -43,13 +43,16 @@
                <h3>{{ film.original_language }}</h3>
                <img class="flag":src="getFlag(film.original_language)" alt="">
              </div>
-
+               <button @click='getActors(film.id)' type="button" name="button">Show actors</button>
            </div>
          </div>
 
          <div v-for="serie in arrSeries"class="cards bg-purple">
            <div class="my_poster">
-             <img :src="'https://image.tmdb.org/t/p/w185' + serie.poster_path" alt="">
+             <img v-if='serie.poster_path!=null' :src="'https://image.tmdb.org/t/p/w185' + serie.poster_path" alt="">
+             <div class="">
+               <button @click='prova'></button>
+             </div>
            </div>
            <div class="my_info">
              <h2> {{ serie.name }} </h2>

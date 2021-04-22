@@ -11,6 +11,10 @@ body{
   height: 100vh;
   width: 100%;
 }
+.search_bar{
+  height: 100px;
+  padding: 25px;
+}
 .container_film{
   display: flex;
   flex-wrap: wrap;
@@ -23,7 +27,7 @@ body{
   background-color: rgb(25, 148, 173);
   border-radius: 4px;
   display: inline-block;
-  width: calc(100% / 4 - 25px);
+  width: calc(100% / 6 - 25px);
   padding: 15px;
 }
 .bg-purple {
